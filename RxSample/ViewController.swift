@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxAlamofire
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var num2TextField: UITextField!
     @IBOutlet weak var resultTextLabel: UILabel!
     @IBOutlet weak var isValidButton: UIButton!
+    
+    @IBOutlet weak var jsonTextFireld: UITextField!
     
     var disposeBag = DisposeBag()
     
@@ -40,6 +43,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             .bindTo(isValidButton.rx.isEnabled)
             .addDisposableTo(disposeBag)
         
+        
+        let stringURL = "https://ifconfig.io/all.json"
+        let session = URLSession.shared
+        
+        _ = session.rx
+            .json(url: URL(string: stringURL)!)
+            .observeOn(MainScheduler.instance)
+            .subscribe { print($0) }
     }
     
     // キーボードを view tap でしまう
