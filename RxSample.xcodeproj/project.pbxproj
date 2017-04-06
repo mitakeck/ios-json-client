@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB81D71033B547067C01989 /* Pods_RxSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9852AD177D6CB9AB11FDDDD6 /* Pods_RxSample.framework */; };
 		E9B1F6861E9668DB00405F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1F6851E9668DB00405F87 /* AppDelegate.swift */; };
 		E9B1F6881E9668DB00405F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1F6871E9668DB00405F87 /* ViewController.swift */; };
 		E9B1F68B1E9668DB00405F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B1F6891E9668DB00405F87 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9852AD177D6CB9AB11FDDDD6 /* Pods_RxSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D97A56804BD5FF2E3FBA278 /* Pods-RxSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.release.xcconfig"; sourceTree = "<group>"; };
+		B7C0D91CA8D4F6DBDAB19E7E /* Pods-RxSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample/Pods-RxSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B1F6821E9668DB00405F87 /* RxSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B1F6851E9668DB00405F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9B1F6871E9668DB00405F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB81D71033B547067C01989 /* Pods_RxSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B017DAC383BBE6BA3A954D71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9852AD177D6CB9AB11FDDDD6 /* Pods_RxSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D13CA4781543E92EF95EEFA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0D91CA8D4F6DBDAB19E7E /* Pods-RxSample.debug.xcconfig */,
+				9D97A56804BD5FF2E3FBA278 /* Pods-RxSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E9B1F6791E9668DB00405F87 = {
 			isa = PBXGroup;
 			children = (
 				E9B1F6841E9668DB00405F87 /* RxSample */,
 				E9B1F6831E9668DB00405F87 /* Products */,
+				D13CA4781543E92EF95EEFA3 /* Pods */,
+				B017DAC383BBE6BA3A954D71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9B1F6941E9668DB00405F87 /* Build configuration list for PBXNativeTarget "RxSample" */;
 			buildPhases = (
+				F32385B252FC27732522EDDC /* [CP] Check Pods Manifest.lock */,
 				E9B1F67E1E9668DB00405F87 /* Sources */,
 				E9B1F67F1E9668DB00405F87 /* Frameworks */,
 				E9B1F6801E9668DB00405F87 /* Resources */,
+				3CE20C6D39F46624F5EC9D27 /* [CP] Embed Pods Frameworks */,
+				35D73F2710271558D882E7EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35D73F2710271558D882E7EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSample/Pods-RxSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CE20C6D39F46624F5EC9D27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSample/Pods-RxSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32385B252FC27732522EDDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9B1F67E1E9668DB00405F87 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		E9B1F6951E9668DB00405F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C0D91CA8D4F6DBDAB19E7E /* Pods-RxSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxSample/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		E9B1F6961E9668DB00405F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D97A56804BD5FF2E3FBA278 /* Pods-RxSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RxSample/Info.plist;
